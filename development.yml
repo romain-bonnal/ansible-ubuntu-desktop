@@ -34,6 +34,12 @@
         - docker
         - development:infrastructure
       when: docker_enabled | bool
+    - role: docker-compose
+      become: true
+      tags:
+        - docker-compose
+        - development:infrastructure
+      when: docker_compose_enabled | bool
     - role: development/doctl
       tags:
         - doctl
@@ -63,6 +69,11 @@
 #        - development:infrastructure
 #        - developer
 #      when: minikube_enabled | bool
+    - role: git
+      become: true
+      tags:
+        - git
+      when: git_enabled | bool
     - role: golang/language
       tags:
         - go
@@ -80,6 +91,12 @@
         - java:openjdk
         - development:programing
       when: java_openjdk_enabled | bool
+    - role: java/zulu
+      tags:
+        - java
+        - java:zulu
+        - development:programing
+      when: java_zulu_enabled | bool
     - role: java/openjre
       tags:
         - java
@@ -120,6 +137,11 @@
         - ruby:landscape
         - development:programing
       when: ruby_landscape_enabled | bool
+    - role: talend
+      tags:
+        - talend
+        - development:infrastructure
+      when: talend_enabled | bool
     - role: terraform/tfenv
       tags:
         - terraform
@@ -155,6 +177,12 @@
         - virtmanager
         - development:infrastructure
       when: virtmanager_enabled | bool
+    - role: vscode
+      become: true
+      tags:
+        - vscode
+        - development:infrastructure
+      when: vscode_enabled | bool
     - role: zsh
       tags:
         - zsh

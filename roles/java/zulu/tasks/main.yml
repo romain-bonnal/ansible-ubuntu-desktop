@@ -11,19 +11,19 @@
 - name: Add Apt signing key
   become: true
   ansible.builtin.apt_key:
-    url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xa09776a495c8273be0d525fa6da81f13824cf812"
-    state: present
+    url: keyserver.ubuntu.com
+    id: 0xB1998361219BD9C9
 
 - name: Add repository into sources list
   become: true
   ansible.builtin.apt_repository:
-    repo: deb https://ppa.launchpadcontent.net/nemonein/ksnip/ubuntu focal main
+    repo: deb http://repos.azulsystems.com/ubuntu stable main
     state: present
 
-- name: Install ksnip
+- name: Install zulu
   become: true
   apt:
-    pkg: "ksnip"
+    pkg: "zulu-11"
     state: latest
     update_cache: true
     cache_valid_time: "{{ aptcachetime }}"
