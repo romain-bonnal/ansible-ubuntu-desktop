@@ -1,4 +1,4 @@
-/.galaxy/
+.galaxy/
 /TODO.md
 *.retry
 group_vars/_*.yml
