@@ -1,0 +1,9 @@
+---
+
+- name: Install Terminator
+  become: true
+  apt:
+    pkg: "terminator"
+    state: latest
+    update_cache: yes
+    cache_valid_time: "{{ aptcachetime }}"
