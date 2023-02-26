@@ -1,0 +1,9 @@
+---
+
+- name: Install chrome-gnome-extension
+  become: true
+  apt:
+    pkg: "chrome-gnome-shell"
+    state: latest
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"

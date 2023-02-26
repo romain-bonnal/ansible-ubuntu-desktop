@@ -35,6 +35,12 @@
       tags:
         - chrome
       when: chrome_enabled | bool
+    - role: chrome-gnome-extension
+      become: true
+      tags:
+        - chrome
+        - chrome-gnome-extension
+      when: chrome_gnome_extension_enabled | bool
     - role: discord
       become: true
       tags:
