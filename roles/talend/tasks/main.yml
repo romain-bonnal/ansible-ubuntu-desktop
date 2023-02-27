@@ -6,3 +6,10 @@
     dest: /opt
     creates: /opt/talend-bigdata
     remote_src: yes
+
+# @todo Create launcher
+# - name: Create postman symlink
+#   file:
+#     src: /opt/Postman/Postman
+#     dest: /usr/bin/postman
+#     state: link
