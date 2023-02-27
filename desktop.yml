@@ -76,6 +76,11 @@
       tags:
         - gnome-encfs-manager
       when: gnome_encfs_manager_enabled | bool
+    - role: gnome-tweaks
+      become: true
+      tags:
+        - gnome-tweaks
+      when: gnome_tweaks_enabled | bool
     - role: gparted
       become: true
       tags:
