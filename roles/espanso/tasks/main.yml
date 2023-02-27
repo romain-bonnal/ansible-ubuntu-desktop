@@ -8,8 +8,12 @@
 
 - name: Download espanso
   get_url: url="https://github.com/federico-terzi/espanso/releases/download/v2.1.8/espanso-debian-x11-amd64.deb" dest="/tmp/espanso-debian-x11-amd64.deb"
-  # when: libgoocanvas_check_deb.rc == 1
 
 - name: Install espanso
   apt: deb="/tmp/espanso-debian-x11-amd64.deb"
-  # when: libgoocanvas_check_deb.rc == 1
+
+- name: Register as service
+  command: espanso service register
+  register: myoutput
+  become: true
+  become_user: "{{ ansible_env.USER }}"
