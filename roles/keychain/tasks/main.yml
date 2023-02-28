@@ -1,0 +1,9 @@
+---
+
+- name: Install keychain
+  become: true
+  apt:
+    pkg: "keychain"
+    state: latest
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"

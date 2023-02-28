@@ -92,6 +92,11 @@
         - java:openjre
         - development:programing
       when: java_openjre_enabled | bool
+    - role: keychain
+      tags:
+        - keychain
+        - development:infrastructure
+      when: keychain_enabled | bool
     - role: lens
       become: true
       tags:
