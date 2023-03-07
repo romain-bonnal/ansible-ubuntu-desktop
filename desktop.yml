@@ -115,6 +115,11 @@
       tags:
         - libreoffice
       when: libreoffice_enabled | bool
+    - role: linphone
+      become: true
+      tags:
+        - linphone
+      when: linphone_enabled | bool
     - role: losslesscut
       become: true
       tags:

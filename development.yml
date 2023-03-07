@@ -108,6 +108,11 @@
         - python
         - development:programing
       when: python_enabled | bool
+    - role: postman
+      tags:
+        - postman
+        - development:programing
+      when: postman_enabled | bool
     - role: mysql-workbench
       become: true
       tags:

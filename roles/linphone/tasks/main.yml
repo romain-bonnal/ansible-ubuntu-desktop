@@ -1,0 +1,9 @@
+---
+
+- name: Install linphone-desktop
+  become: true
+  apt:
+    pkg: "linphone-desktop"
+    state: latest
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"

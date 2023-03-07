@@ -1,0 +1,6 @@
+---
+
+- name: Install snap postman
+  become: true
+  snap:
+    name: "postman"
