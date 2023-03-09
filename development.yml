@@ -113,6 +113,12 @@
         - postman
         - development:programing
       when: postman_enabled | bool
+    - role: meld
+      become: true
+      tags:
+        - meld
+        - development:programing
+      when: meld_enabled | bool
     - role: mysql-workbench
       become: true
       tags:

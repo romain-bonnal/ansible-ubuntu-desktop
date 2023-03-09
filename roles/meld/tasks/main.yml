@@ -1,0 +1,9 @@
+---
+
+- name: Install Meld
+  become: true
+  apt: 
+    pkg: "meld"
+    state: latest
+    update_cache: yes
+    cache_valid_time: "{{ aptcachetime }}"
