@@ -1,10 +1,19 @@
 ---
 
+- name: Create talend directory
+  become: true
+  become_user: root
+  file:
+    path: /opt/talend-bigdata
+    owner: "{{ansible_user}}"
+    group: "{{ansible_user}}"
+    state: directory
+    mode: 0755
+
 - name: Download Talend TOS BD
   unarchive: 
     src: https://deac-ams.dl.sourceforge.net/project/talend-bigdata/Talend%20Open%20Studio%20for%20Big%20Data/8.0.1/TOS_BD-20211109_1610-V8.0.1.zip
-    dest: /opt
-    creates: /opt/talend-bigdata
+    dest: /opt/talend-bigdata
     remote_src: yes
 
 # @todo Create launcher
