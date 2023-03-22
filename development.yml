@@ -58,6 +58,11 @@
       tags:
         - git
       when: git_enabled | bool
+    - role: git-flow
+      become: true
+      tags:
+        - git-flow
+      when: git_flow_enabled | bool
     - role: golang/language
       tags:
         - go

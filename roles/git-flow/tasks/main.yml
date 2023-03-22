@@ -1,0 +1,9 @@
+---
+
+- name: Install Git-flow
+  become: true
+  apt:
+    pkg: "git-flow"
+    state: latest
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"

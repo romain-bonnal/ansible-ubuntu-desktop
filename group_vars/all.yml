@@ -26,6 +26,7 @@ filezilla_enabled:                no
 firefox_enabled:                  no
 gimp_enabled:                     no
 git_enabled:                      no
+git_flow_enabled:                 no 
 gitg_enabled:                     no
 gnome_encfs_manager_enabled:      no
 gnome_tweaks_enabled:             no
@@ -87,6 +88,7 @@ virtmanager_enabled:              no
 vscode_enabled:                   no
 vscodium_enabled:                 no
 winbox_enabled:                   no
+zoiper_enabled:                   no
 zsh_enabled:                      no
 
 # http://docs.ansible.com/ansible/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable
