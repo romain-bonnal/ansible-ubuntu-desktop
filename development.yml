@@ -124,6 +124,12 @@
         - meld
         - development:programing
       when: meld_enabled | bool
+    - role: mysql-client
+      become: true
+      tags:
+        - mysql-client
+        - development:database
+      when: mysql_client_enabled | bool
     - role: mysql-workbench
       become: true
       tags:

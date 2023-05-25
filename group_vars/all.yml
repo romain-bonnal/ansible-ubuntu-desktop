@@ -50,6 +50,7 @@ linphone_enabled:                 no
 losslesscut_enabled:              no
 minikube_enabled:                 no
 meld_enabled:                     no
+mysql_client_enabled:             no
 mysql_workbench_enabled:          no
 nautilus_plugins_enabled:         no
 nextcloud_enabled:                no

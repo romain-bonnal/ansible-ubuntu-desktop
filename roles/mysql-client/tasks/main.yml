@@ -1,0 +1,9 @@
+---
+
+- name: Install Mysql Client
+  become: true
+  apt:
+    pkg: "mysql-client"
+    state: latest
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
