@@ -63,6 +63,11 @@
       tags:
         - git-flow
       when: git_flow_enabled | bool
+    - role: goaccess
+      tags:
+        - goaccess
+        - development:infrastructure
+      when: goaccess_enabled | bool
     - role: golang/language
       tags:
         - go

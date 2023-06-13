@@ -1,0 +1,8 @@
+---
+
+- name: Install goaccess
+  apt: 
+    pkg: goaccess
+    state: present
+    update_cache: yes
+    cache_valid_time: "{{ aptcachetime }}"
