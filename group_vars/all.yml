@@ -55,6 +55,7 @@ mysql_workbench_enabled:          no
 nautilus_plugins_enabled:         no
 nextcloud_enabled:                no
 noisetorch_enabled:               no
+obsidian_enabeld:                 no
 pop_os_enabled:                   no
 pop_os_shell_enabled:             no
 postman_enabled:                  no

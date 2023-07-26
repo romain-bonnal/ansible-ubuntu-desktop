@@ -113,6 +113,11 @@
         - lens
         - development:editor
       when: lens_enabled | bool
+    - role: obsidian
+      tags:
+        - obsidian
+        - development:programing
+      when: obsidian_enabled | bool
     - role: python
       tags:
         - python

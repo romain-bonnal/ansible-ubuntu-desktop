@@ -1,25 +1,11 @@
 ---
 
-- name: Create talend directory
+- name: Download Obsidian
+  get_url: url="https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.snap" dest="/tmp/obsidian_1.3.5_amd64.snap"
+
+- name: Install snap obsidian
   become: true
-  become_user: root
-  file:
-    path: /opt/obsidian
-    owner: "{{ansible_user}}"
-    group: "{{ansible_user}}"
-    state: directory
-    mode: 0755
-
-- name: Download Obsidian snap
-  unarchive: 
-    src: https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.4/obsidian_1.3.4_amd64.snap
-    dest: /opt/obsidian
-    remote_src: yes
-
-# - name: Install Obsidian
-#   snap:
-#     name:
-#       - dbeaver-ce
-#     state: present
-
-# snap install obsidian_<version>_<arch>.snap --dangerous --classic
+  snap:
+    name: "obsidian_1.3.5_amd64.snap"
+    classic: true
+    dangerous: true
