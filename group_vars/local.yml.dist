@@ -1,0 +1,108 @@
+common_enabled:  no
+locales_enabled: no
+desktop_enabled: no
+
+angryipscanner_enabled:           no
+atom_enabled:                     no
+aws_enabled:                      no
+awscli_enabled:                   no
+awsebcli_enabled:                 no
+awsecscli_enabled:                no
+barrier_enabled:                  no
+bitwarden_enabled:                no
+chromium_enabled:                 no
+chrome_enabled:                   yes
+chrome_gnome_extension_enabled:   yes
+common_git_enabled:               no
+dbeaver_enabled:                  no
+discord_enabled:                  no
+doctl_enabled:                    no
+docker_enabled:                   yes
+docker_compose_enabled:           yes
+dots_enabled:                     no
+espanso_enabled:                  yes
+envchain_enabled:                 no
+filezilla_enabled:                no
+firefox_enabled:                  no
+gimp_enabled:                     no
+git_enabled:                      yes
+git_flow_enabled:                 yes 
+gitg_enabled:                     yes
+gnome_encfs_manager_enabled:      no
+gnome_tweaks_enabled:             yes
+gparted_enabled:                  no
+goaccess_enabled:                 yes
+go_enabled:                       no
+go_assh_enabled:                  no
+guake_enabled:                    no
+handbrake_enabled:                no
+indicator_sysmonitor_enabled:     no
+java_openjdk_enabled:             no
+java_zulu_enabled:                no
+kazan_enabled:                    no
+keepassxc_enabled:                yes
+keychain_enabled:                 yes
+ksnip_enabled:                    yes
+kubectl_enabled:                  no
+lens_enabled:                     no
+ledger_live_enabled:              no
+libreoffice_enabled:              no
+linphone_enabled:                 no
+losslesscut_enabled:              no
+minikube_enabled:                 no
+meld_enabled:                     yes
+mysql_client_enabled:             no
+mysql_workbench_enabled:          no
+nautilus_plugins_enabled:         no
+nextcloud_enabled:                yes
+noisetorch_enabled:               no
+pop_os_enabled:                   no
+pop_os_shell_enabled:             no
+postman_enabled:                  no
+python_enabled:                   no
+remmina_enabled:                  no
+ruby_enabled:                     no
+ruby_rbenv_enabled:               no
+ruby_landscape_enabled:           no
+scribus_enabled:                  no
+shutter_enabled:                  no
+signal_enabled:                   no
+skype_enabled:                    no
+slack_enabled:                    yes
+solaar_enabled:                   no
+snapd_enabled:                    no
+ssh_enabled:                      yes
+sublime3_enabled:                 no
+sunflower_enabled:                no
+syncthing_enabled:                no
+talend_enabled:                   no
+teamviewer_enabled:               no
+tfenv_enabled:                    no
+tgenv_enabled:                    no
+thunderbird_enabled:              no
+timeshift_enabled:                no
+tlp_enabled:                      no
+tmux_enabled:                     no
+ufw_enabled:                      no
+vagrant_enabled:                  no
+virtualbox_enabled:               no
+virtmanager_enabled:              no
+vscode_enabled:                   yes
+vscodium_enabled:                 no
+winbox_enabled:                   no
+zoiper_enabled:                   no
+zsh_enabled:                      no
+
+# http://docs.ansible.com/ansible/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable
+aptcachetime: 3600
+locale: "fr_FR.UTF-8"
+timezone: "Europe/Paris"
+chromium:
+  set_default: false
+  policy: false
+  extensions: false
+ssh:
+  start: true
+  service_enabled: true
+  password_auth: false
+  root_login: false
