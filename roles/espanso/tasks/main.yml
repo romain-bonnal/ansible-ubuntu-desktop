@@ -1,8 +1,7 @@
 ---
 
 - name: Download espanso
-  # get_url: url="https://github.com/federico-terzi/espanso/releases/download/v2.1.8/espanso-debian-x11-amd64.deb" dest="/tmp/espanso-debian.deb"
-  get_url: url="https://github.com/espanso/espanso/releases/download/v2.1.8/espanso-debian-wayland-amd64.deb" dest="/tmp/espanso-debian.deb"
+  get_url: url="https://github.com/espanso/espanso/releases/latest/download/espanso-debian-x11-amd64.deb"
           
 - name: Install espanso
   apt: deb="/tmp/espanso-debian.deb"
